@@ -3,154 +3,301 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Los Sidros de Valdesoto</title>
-    <!-- Enlace a Bootstrap 5.3 por CDN -->
+    <title>Los Sidros de Valdesoto · Mascarada de invierno asturiana</title>
+    <!-- Bootstrap 5.3 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <!-- Hoja de estilos propia -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-    <!-- ===== BARRA DE NAVEGACIÓN ===== -->
-    <nav class="navbar navbar-expand-md bg-dark">
+    <!-- ===== BARRA DE NAVEGACIÓN (sticky) ===== -->
+    <nav class="navbar navbar-expand-md bg-dark sticky-top shadow-sm"> <!-- sticky sirve para que la barra de navegación se mantenga fija en la parte superior al hacer scroll -->
         <div class="container">
-            <a class="navbar-brand text-white" href="index.html">Los Sidros de Valdesoto</a>
+            <a class="navbar-brand text-white fw-bold" href="index.html">
+                <i class="bi bi-tree-fill me-2"></i>Los Sidros de Valdesoto
+            </a>
             <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="historia.html">Historia</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="personajes.html">Personajes</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#sobre">Sobre la fiesta</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#programa">Programa</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#galeria">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#contacto">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="portfolio/historia.html">Historia</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="portfolio/personajes.html">Personajes</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- ===== CARRUSEL DE IMÁGENES ===== -->
-    <div id="carruselSidros" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carruselSidros" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#carruselSidros" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#carruselSidros" data-bs-slide-to="2"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="img/sidrosAsturias.jpg" class="d-block w-100" alt="Sidros desfilando">
-                <div class="carousel-caption">
-                    <h2 class="display-4 text-white">Una mascarada ancestral</h2>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="img/sidrosBailando.jpg" class="d-block w-100" alt="Sidros bailando">
-                <div class="carousel-caption">
-                    <h2 class="display-4 text-white">Tradición viva en Asturias</h2>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="img/saltosidro.jpg" class="d-block w-100" alt="Sidro saltando un muro">
-                <div class="carousel-caption">
-                    <h2 class="display-4 text-white">Cencerros y saltos</h2>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carruselSidros" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carruselSidros" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </button>
-    </div>
-
-    <!-- ===== INTRODUCCIÓN ===== -->
-    <div class="container my-5">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h1 class="display-5">Una tradición que sigue viva</h1>
-                <p class="fs-5">
-                    Los Sidros son una mascarada de invierno con raíces precristianas
-                    que se celebra cada enero en Valdesoto, en el concejo de Siero (Asturias).
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== TRES DATOS RÁPIDOS (grid 3 columnas en md, 1 en xs) ===== -->
-    <div class="container my-5">
-        <div class="row gap-3 justify-content-center">
-            <div class="col-12 col-md-3 bg-light border p-4 text-center">
-                <h3 class="fs-4">Lugar</h3>
-                <p>Valdesoto, Siero (Asturias)</p>
-            </div>
-            <div class="col-12 col-md-3 bg-light border p-4 text-center">
-                <h3 class="fs-4">Fecha</h3>
-                <p>Segundo domingo de enero</p>
-            </div>
-            <div class="col-12 col-md-3 bg-light border p-4 text-center">
-                <h3 class="fs-4">Origen</h3>
-                <p>Ritual precristiano de invierno</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== TARJETAS DE ACCESO (cards) ===== -->
-    <div class="container my-5">
-        <div class="row text-center mb-4">
-            <div class="col-12">
-                <h2 class="display-6">Descubre los Sidros</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-6 mb-4">
-                <div class="card">
-                    <img src="img/sidrosAsturias.jpg" class="card-img-top" alt="Sidros desfilando">
-                    <div class="card-body">
-                        <h3 class="card-title fs-4">Historia y origen</h3>
-                        <p class="card-text">
-                            Conoce los rituales precristianos, su simbolismo
-                            y la recuperación de esta tradición tras el franquismo.
-                        </p>
-                        <a href="historia.html" class="btn btn-danger">Ver historia</a>
+    <!-- ===== HERO: TÍTULO + CARRUSEL ===== -->
+    <header class="hero py-5"> <!-- hero es una clase que define el estilo del encabezado principal -->
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <!-- Columna texto (izquierda) -->
+                <div class="col-12 col-lg-5">
+                    <p class="text-uppercase text-muted small fw-bold mb-2">Mascarada ancestral · Asturias</p>
+                    <h1 class="display-4 fw-bold mb-3">Los Sidros de Valdesoto</h1>
+                    <p class="lead mb-4">
+                        Una de las mascaradas de invierno más singulares de la península ibérica.
+                        Tradición precristiana viva en el concejo de Siero.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="#sobre" class="btn btn-danger btn-lg">Descubre la fiesta</a>
+                        <a href="#programa" class="btn btn-outline-dark btn-lg">Ver programa</a>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-6 mb-4">
-                <div class="card">
-                    <img src="img/Encuentro121scaled.jpg" class="card-img-top" alt="Personajes de la fiesta">
-                    <div class="card-body">
-                        <h3 class="card-title fs-4">Personajes</h3>
-                        <p class="card-text">
-                            Descubre a Les Madamas, Les Guiletes, El Guirrio
-                            y al propio Sidro, figuras centrales de la mascarada.
-                        </p>
-                        <a href="personajes.html" class="btn btn-danger">Ver personajes</a>
+
+                <!-- Columna carrusel (derecha) -->
+                <div class="col-12 col-lg-7">
+                    <div id="carruselSidros" class="carousel slide shadow" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carruselSidros" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#carruselSidros" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#carruselSidros" data-bs-slide-to="2"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/sidrosAsturias.jpg" class="d-block w-100" alt="Sidros desfilando por Valdesoto">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/sidrosBailando.jpg" class="d-block w-100" alt="Sidros bailando con cencerros">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/saltosidro.jpg" class="d-block w-100" alt="Sidro saltando un muro">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carruselSidros" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carruselSidros" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </header>
+
+    <!-- ===== DATOS CLAVE (3 columnas) ===== -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-12 col-md-4">
+                    <i class="bi bi-geo-alt-fill fs-1 mb-2 d-block"></i>
+                    <h3 class="fs-5 fw-bold">Lugar</h3>
+                    <p class="mb-0">Valdesoto, Siero<br>(Asturias)</p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <i class="bi bi-calendar-event-fill fs-1 mb-2 d-block"></i>
+                    <h3 class="fs-5 fw-bold">Cuándo</h3>
+                    <p class="mb-0">Segundo domingo<br>de enero</p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <i class="bi bi-bookmark-star-fill fs-1 mb-2 d-block"></i>
+                    <h3 class="fs-5 fw-bold">Origen</h3>
+                    <p class="mb-0">Ritual precristiano<br>de invierno</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SOBRE LA FIESTA ===== -->
+    <section id="sobre" class="py-5">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-12 col-md-6">
+                    <img src="img/Encuentro121scaled.jpg" alt="Encuentro de Sidros" class="img-fluid rounded shadow-sm">
+                </div>
+                <div class="col-12 col-md-6">
+                    <p class="text-uppercase text-danger small fw-bold mb-2">Sobre la fiesta</p>
+                    <h2 class="fw-bold mb-4">Una tradición que sobrevivió al olvido</h2>
+                    <p>
+                        Los Sidros son una mascarada de invierno con raíces en antiguos rituales
+                        agrarios. Sus máscaras y cencerros simbolizaban la expulsión de los malos
+                        espíritus y la llegada de un nuevo ciclo de fertilidad.
+                    </p>
+                    <p>
+                        Durante el franquismo estuvo a punto de desaparecer, pero asociaciones locales
+                        y vecinos la recuperaron. Hoy es una de las mascaradas más reconocidas del norte
+                        de España, junto con las de León, Galicia y Zamora.
+                    </p>
+                    <a href="portfolio/historia.html" class="btn btn-outline-danger mt-3">
+                        Leer la historia completa <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROGRAMA DEL DÍA ===== -->
+    <section id="programa" class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <p class="text-uppercase text-danger small fw-bold mb-2">Programa</p>
+                    <h2 class="fw-bold">Cómo se vive el Domingu de Sidros</h2>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <span class="badge bg-danger mb-3">10:00</span>
+                            <h3 class="fs-5 fw-bold">Pasacalles</h3>
+                            <p class="card-text mb-0">Los Sidros recorren el pueblo haciendo sonar los cencerros como llamada a la abundancia.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <span class="badge bg-danger mb-3">12:00</span>
+                            <h3 class="fs-5 fw-bold">Las Coplas</h3>
+                            <p class="card-text mb-0">Sátira política, humor local y críticas ingeniosas en distintos puntos del pueblo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <span class="badge bg-danger mb-3">13:30</span>
+                            <h3 class="fs-5 fw-bold">Carrera y saltos</h3>
+                            <p class="card-text mb-0">Los Sidros corren entre las casas y saltan haciendo sonar los cencerros rítmicamente.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <span class="badge bg-danger mb-3">17:00</span>
+                            <h3 class="fs-5 fw-bold">Encuentros</h3>
+                            <p class="card-text mb-0">Los personajes humorísticos juegan con el público, especialmente con los más pequeños.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- ===== CITA DESTACADA ===== -->
-    <div class="container-fluid bg-dark text-white py-5">
+    <section class="py-5 bg-dark text-white">
         <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p class="fs-3">
-                        «El sonido del cencerro es una llamada a la abundancia
-                        y al nuevo ciclo agrícola»
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8 text-center">
+                    <i class="bi bi-quote fs-1 mb-3 d-block opacity-50"></i>
+                    <p class="fs-3 fw-light fst-italic mb-3">
+                        El sonido del cencerro es una llamada a la abundancia
+                        y al nuevo ciclo agrícola.
                     </p>
+                    <p class="text-uppercase small mb-0">Tradición oral asturiana</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- ===== GALERÍA DESTACADA ===== -->
+    <section id="galeria" class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <p class="text-uppercase text-danger small fw-bold mb-2">Galería</p>
+                    <h2 class="fw-bold">Imágenes de la fiesta</h2>
+                </div>
+            </div>
+            <div class="row g-3 galeria-home">
+                <div class="col-6 col-md-4">
+                    <img src="img/sidrosNinos.jpg" alt="Niños participando en la fiesta" class="img-fluid rounded">
+                </div>
+                <div class="col-6 col-md-4">
+                    <img src="img/sidroscomediesoviedo12.jpg" alt="Sidros en Oviedo" class="img-fluid rounded">
+                </div>
+                <div class="col-6 col-md-4">
+                    <img src="img/sidrosBailando.jpg" alt="Sidros bailando" class="img-fluid rounded">
+                </div>
+                <div class="col-6 col-md-4">
+                    <img src="img/saltosidro.jpg" alt="Sidro saltando" class="img-fluid rounded">
+                </div>
+                <div class="col-6 col-md-4">
+                    <img src="img/sidrosAsturias.jpg" alt="Sidros desfilando" class="img-fluid rounded">
+                </div>
+                <div class="col-6 col-md-4">
+                    <img src="img/Presidente_Domingu_Sidros_y_Comedies.jpg" alt="Visita oficial" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== UBICACIÓN (mapa) ===== -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-12 col-md-5">
+                    <p class="text-uppercase text-danger small fw-bold mb-2">Ubicación</p>
+                    <h2 class="fw-bold mb-4">Dónde encontrarnos</h2>
+                    <p class="mb-2"><i class="bi bi-geo-alt-fill text-danger me-2"></i><b>Valdesoto</b>, concejo de Siero</p>
+                    <p class="mb-2"><i class="bi bi-pin-map-fill text-danger me-2"></i>Principado de Asturias, España</p>
+                    <p class="mb-2"><i class="bi bi-signpost-fill text-danger me-2"></i>A 20 minutos de Oviedo y Gijón</p>
+                </div>
+                <div class="col-12 col-md-7">
+                    <div class="ratio ratio-16x9 shadow-sm rounded overflow-hidden">
+                        <iframe
+                            src="https://www.openstreetmap.org/export/embed.html?bbox=-5.6500,43.4000,-5.5500,43.4500&amp;layer=mapnik&amp;marker=43.4250,-5.6000"
+                            title="Mapa de Valdesoto"
+                            style="border:0;"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LLAMADA A LA ACCIÓN / CONTACTO ===== -->
+    <section id="contacto" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8 text-center">
+                    <p class="text-uppercase text-danger small fw-bold mb-2">Contacto</p>
+                    <h2 class="fw-bold mb-3">¿Quieres saber más?</h2>
+                    <p class="lead mb-4">
+                        Si te interesa visitar la fiesta o conocer su historia en profundidad,
+                        ponte en contacto con la asociación cultural.
+                    </p>
+                    <div class="d-flex justify-content-center flex-wrap gap-2">
+                        <a href="mailto:info@sidrosvaldesoto.es" class="btn btn-danger btn-lg">
+                            <i class="bi bi-envelope-fill me-2"></i>Envíanos un email
+                        </a>
+                        <a href="portfolio/personajes.html#contacto" class="btn btn-outline-dark btn-lg">
+                            <i class="bi bi-chat-left-text-fill me-2"></i>Formulario de contacto
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- ===== PIE DE PÁGINA ===== -->
-    <footer class="bg-dark text-white text-center p-4">
-        <p class="mb-0">Proyecto Diseño de Interfaces Web · CIFP Avilés · Curso 2025-2026</p>
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6 text-center text-md-start mb-2 mb-md-0">
+                    <p class="mb-0 small">© 2026 Los Sidros de Valdesoto</p>
+                </div>
+                <div class="col-12 col-md-6 text-center text-md-end">
+                    <p class="mb-0 small">Proyecto DIWEB · CIFP Avilés · Curso 2025-2026</p>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <!-- JS de Bootstrap (necesario para navbar colapsable, carrusel...) -->
+    <!-- JS de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
