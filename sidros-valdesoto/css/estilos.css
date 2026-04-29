@@ -1,20 +1,168 @@
-/* Estilos propios del proyecto Los Sidros de Valdesoto */
+/* ============================================
+   PALETA - LOS SIDROS DE VALDESOTO
+   ============================================
+   Verde claro:  #B9DE8F  (acentos suaves)
+   Verde medio:  #659430  (botones, badges)
+   Verde oscuro: #274800  (navbar, footer, títulos)
+   ============================================ */
 
-/* Altura fija de las imágenes del carrusel para que no se descontrole */
-.carousel-item img {
-    height: 500px;
+:root {
+    --verde-claro: #B9DE8F;
+    --verde-medio: #659430;
+    --verde-oscuro: #274800;
+}
+
+/* ===== TIPOGRAFÍA Y BASE ===== */
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: var(--verde-oscuro);
+}
+
+/* ===== NAVBAR ===== */
+.navbar.bg-dark {
+    background-color: var(--verde-oscuro) !important;
+}
+
+.navbar .nav-link {
+    transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+    color: var(--verde-claro) !important;
+}
+
+/* ===== HERO ===== */
+.hero {
+    background-color: #fafaf7;
+}
+
+/* Título principal en hero */
+.hero h1 {
+    color: var(--verde-oscuro);
+}
+
+/* Cabecera de las páginas internas (historia, personajes) */
+.page-header {
+    background-color: #fafaf7;
+    border-bottom: 4px solid var(--verde-medio);
+}
+
+.page-header h1 {
+    color: var(--verde-oscuro);
+}
+
+/* Enlace activo en navbar */
+.navbar .nav-link.active {
+    color: var(--verde-claro) !important;
+    font-weight: bold;
+}
+
+/* Reduce un poco el tamaño del carrusel del hero */
+#carruselSidros .carousel-item img {
+    height: 400px;
     object-fit: cover;
 }
 
-/* Altura uniforme de las imágenes de la galería */
-.card-img-top {
-    height: 250px;
-    object-fit: cover;
+/* En móvil, carrusel más bajo */
+@media (max-width: 768px) {
+    #carruselSidros .carousel-item img {
+        height: 280px;
+    }
 }
 
-/* En pantallas pequeñas reducimos el carrusel */
-@media (max-width: 575px) {
-    .carousel-item img {
-        height: 300px;
+/* ===== BOTONES ===== */
+/* btn-danger → verde medio */
+.btn-danger {
+    background-color: var(--verde-medio);
+    border-color: var(--verde-medio);
+}
+
+.btn-danger:hover,
+.btn-danger:focus {
+    background-color: var(--verde-oscuro);
+    border-color: var(--verde-oscuro);
+}
+
+/* btn-outline-danger → verde medio */
+.btn-outline-danger {
+    color: var(--verde-medio);
+    border-color: var(--verde-medio);
+}
+
+.btn-outline-danger:hover {
+    background-color: var(--verde-medio);
+    border-color: var(--verde-medio);
+}
+
+/* ===== TEXTOS DE ACENTO (eyebrow text) ===== */
+/* "SOBRE LA FIESTA", "PROGRAMA", etc. */
+.text-danger {
+    color: var(--verde-medio) !important;
+}
+
+/* ===== ICONOS DE LA SECCIÓN DATOS CLAVE ===== */
+section.bg-light .bi {
+    color: var(--verde-medio);
+}
+
+/* ===== BADGES (horarios del programa) ===== */
+.badge.bg-danger {
+    background-color: var(--verde-medio) !important;
+}
+
+/* ===== CARDS DEL PROGRAMA ===== */
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+
+/* ===== CITA DESTACADA (fondo oscuro) ===== */
+section.bg-dark {
+    background-color: var(--verde-oscuro) !important;
+}
+
+/* ===== GALERÍA HOME ===== */
+/* Iguala el tamaño de las imágenes */
+.galeria-home img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.galeria-home img:hover {
+    transform: scale(1.03);
+}
+
+/* ===== FOOTER ===== */
+footer.bg-dark {
+    background-color: var(--verde-oscuro) !important;
+}
+
+/* ===== AJUSTES RESPONSIVE EXTRA ===== */
+
+/* Tablet: ajustar tamaño de la galería */
+@media (min-width: 768px) and (max-width: 991px) {
+    .galeria-home img {
+        height: 200px;
+    }
+}
+
+/* Móvil: galería más pequeña */
+@media (max-width: 767px) {
+    .galeria-home img {
+        height: 150px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
     }
 }
