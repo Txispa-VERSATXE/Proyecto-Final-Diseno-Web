@@ -24,20 +24,21 @@ h1, h2, h3 {
 
 /* ===== NAVBAR ===== */
 .navbar.bg-dark {
-    background-color: var(--verde-oscuro) !important;
+    background-color: var(--verde-oscuro) !important; /* Sobrescribe el fondo oscuro de Bootstrap*/
 }
 
 .navbar .nav-link {
-    transition: color 0.2s ease;
+    transition: color 0.2s ease; /* Transición suave para el hover */
 }
 
 .navbar .nav-link:hover {
-    color: var(--verde-claro) !important;
+    color: var(--verde-claro) !important; /* Cambia el color al pasar el mouse */
 }
 
-/* ===== HERO ===== */
-.hero {
-    background-color: #fafaf7;
+/* ===== HERO ===== es el primer bloque visible en la parte superior de un sitio web, diseñado para captar la atención inmediatamente al visitante*/
+
+.hero { /* Sección del hero en la página principal */
+    background-color: #fafaf7; /* Fondo claro para destacar el hero */
 }
 
 /* Título principal en hero */
